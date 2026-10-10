@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Davi Correa Viana Lima | Desenvolvedor Full Stack em formação</title>
+  <meta name="description" content="Portfólio de desenvolvedor Full Stack em formação, com foco em Backend, em busca do primeiro estágio em programação.">
+  <meta property="og:title" content="Davi Correa Viana Lima | Desenvolvedor Full Stack em formação">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Principal">
+      <a href="#inicio" class="logo" id="logo">Davi Correa Viana Lima</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="icon-btn" id="themeBtn" aria-label="Alternar modo claro/escuro">🌙</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="inicio" class="hero container">
+      <p class="eyebrow">Olá, eu sou</p>
+      <h1 id="heroName">Davi Correa Viana Lima</h1>
+      <h2>Desenvolvedor Full Stack <span class="accent" id="typing" aria-hidden="true"></span><span class="cursor" aria-hidden="true">|</span></h2>
+      <p class="lead">Sou estudante de programação e busco criar aplicações funcionais e eficientes. Estou em constante aprendizado, praticando diariamente com projetos reais, e tenho o objetivo de evoluir cada vez mais conforme o que vou fazendo.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" data-link="github" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="#contato">Contato</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="container reveal">
+      <h2 class="title">Sobre mim</h2>
+      <div class="about">
+        <p>
+          Sou estudante de programação com foco em desenvolvimento Backend. Tenho habilidades em lógica de programação, resolução de problemas e desenvolvimento de aplicações, além de interesse em aprender novas linguagens e melhorar minhas práticas de código.
+        </p>
+        <p>
+          Tenho interesse em desenvolver aplicações que resolvam problemas reais, priorizando o resultado final, a organização e a eficiência das soluções. Busco ampliar continuamente minhas competências técnicas por meio de estudos e projetos práticos, acompanhando as boas práticas do desenvolvimento de software.
+        </p>
+      </div>
+    </section>
+
+    <section id="habilidades" class="container reveal">
+      <h2 class="title">Habilidades técnicas</h2>
+      <div class="grid skills" id="skills"></div>
+    </section>
+
+    <section id="projetos" class="container reveal">
+      <h2 class="title">Projetos</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filtrar projetos"></div>
+      <div class="grid projects" id="projects"></div>
+      <p class="center"><a class="btn" data-link="github" target="_blank" rel="noopener">Ver todos no GitHub</a></p>
+    </section>
+
+
+    <section id="contato" class="container reveal">
+      <h2 class="title">Contato</h2>
+      <div class="contact">
+        <div>
+          <p>Vamos conversar? Envie uma mensagem ou fale comigo pelos canais abaixo.</p>
+          <ul class="links">
+            <li><a data-link="email">E-mail</a></li>
+            <li><a data-link="github" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+        <form id="form" novalidate>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" autocomplete="name" required>
+          <small class="err" id="e-nome"></small>
+
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" inputmode="numeric" placeholder="(00) 00000-0000" autocomplete="tel" required>
+          <small class="err" id="e-telefone"></small>
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <small class="err" id="e-email"></small>
+
+          <label for="mensagem">Mensagem <span class="count" id="count">0/500</span></label>
+          <textarea id="mensagem" name="mensagem" rows="5" maxlength="500" required></textarea>
+          <small class="err" id="e-mensagem"></small>
+
+          <button class="btn primary" type="submit">Enviar mensagem</button>
+          <small class="hint">O envio abre o seu aplicativo de e-mail com a mensagem pronta.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> Davi Correa Viana Lima</p>
+      <p><a data-link="email">E-mail</a> · <a data-link="github" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <dialog id="modal" aria-labelledby="mTitle">
+    <h3 id="mTitle"></h3>
+    <p id="mText"></p>
+    <button class="btn primary" id="mClose">Fechar</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
